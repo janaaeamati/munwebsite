@@ -1,40 +1,52 @@
 body {
-    margin: 0;
-    padding: 0;
-  }
-  
-  .navbar {
-    background-color: rgba(0, 0, 0, 0.5); /* Set the background color with transparency */
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px;
-  }
-  
-  .logo img {
-    width: 166px;
-    height: 90px;
-  }
-  
-  .nav-links {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-  }
-  
-  .nav-links li {
-    display: inline;
-    margin-right: 20px;
-  }
-  
-  .nav-links a {
-    text-decoration: none;
-    color: white;
-    font-weight: bold;
-    transition: color 0.3s;
-  }
-  
-  .nav-links a:hover {
-    color: #00a0e0; /* Change the link color on hover */
-  }
-  
+  margin: 0;
+  padding: 0;
+}
+
+.navbar {
+  background-color: black;
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.navbar img {
+  width: 92.2px;
+  height: 50px;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  margin-right: 20px; /* Adjust the spacing between links as needed */
+}
+
+.logo img {
+  width: 166px;
+  height: 90px;
+}
+
+.nav-links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.nav-links li {
+  display: inline;
+  margin-right: 20px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: #00a0e0;
+}
