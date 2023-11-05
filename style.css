@@ -20,7 +20,8 @@ body {
 .navbar a {
   color: white;
   text-decoration: none;
-  margin-right: 20px; /* Adjust the spacing between links as needed */
+  margin-right: 20px;
+  /* Adjust the spacing between links as needed */
 }
 
 .logo img {
@@ -49,4 +50,19 @@ body {
 
 nav a:hover {
   color: #00a0e0;
+}
+
+.about-body {
+  width: 1000px;
+  margin: 0 auto;
+  margin-top: 100px;
+  text-align: left;
+
+}
+
+.contact-body {
+  width: 500px;
+  margin: 0 auto;
+  margin-top: 100px;
+  text-align: center;
 }
