@@ -53,11 +53,33 @@ nav a:hover {
 }
 
 .about-body {
-  width: 1000px;
+  width: 55%;
   margin: 0 auto;
-  margin-top: 100px;
-  text-align: left;
+  margin-top: 3.3rem;
+  text-align: center;
 
+}
+
+.about-body p {
+  margin-bottom: 5rem;
+}
+
+
+.about-body h2 {
+  font-weight: 100;
+  font-size: 35px;
+  margin-bottom: 34px;
+}
+
+#about-title {
+  text-align: center;
+  font-weight: 500;
+  font-size: 2.8rem;
+  margin-bottom: 2rem;
+}
+
+#about-line{
+  max-width: 50%;
 }
 
 .contact-body {
