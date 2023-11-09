@@ -3,6 +3,23 @@ body {
   padding: 0;
 }
 
+.sticky-picture {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  background-color: #f1f1f1;
+  padding: 20px;
+  text-align: center;
+}
+
+.banner {
+  background-image: url('your-image.jpg');
+  background-size: cover;
+  background-attachment: fixed;
+  height: 100vh; /* Adjust as needed */
+}
+
 .navbar {
   background-color: black;
   height: 50px;
@@ -94,3 +111,38 @@ nav a:hover {
   font-weight: 500;
   font-size: 2.8rem;
 }
+
+* {
+  box-sizing: border-box;
+  }
+  
+  form.example input[type=text] {
+    padding: 10px;
+    font-size: 17px;
+    border: 1px solid grey;
+    float: left;
+    width: 80%;
+    background: #f1f1f1;
+  }
+  
+  form.example button {
+    float: left;
+    width: 20%;
+    padding: 10px;
+    background: #2196F3;
+    color: white;
+    font-size: 17px;
+    border: 1px solid grey;
+    border-left: none;
+    cursor: pointer;
+  }
+  
+  form.example button:hover {
+    background: #0b7dda;
+  }
+  
+  form.example::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
