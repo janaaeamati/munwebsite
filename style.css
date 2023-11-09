@@ -67,8 +67,8 @@ nav a:hover {
 
 .about-body h2 {
   font-weight: 100;
-  font-size: 35px;
-  margin-bottom: 34px;
+  font-size: 2.3rem;
+  margin-bottom: 2.5rem;
 }
 
 #about-title {
@@ -83,8 +83,14 @@ nav a:hover {
 }
 
 .contact-body {
-  width: 500px;
+  width: 30%;
   margin: 0 auto;
-  margin-top: 100px;
+  margin-top: 3rem;
   text-align: center;
+  font-size: 1.25rem;
+}
+
+.contact-body h1{
+  font-weight: 500;
+  font-size: 2.8rem;
 }
