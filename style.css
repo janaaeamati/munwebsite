@@ -3,6 +3,11 @@ body {
   padding: 0;
 }
 
+h2 {
+  font-family: "Times New Roman", Times, serif;
+  text-align: center;
+}
+
 .sticky-picture {
   position: -webkit-sticky;
   position: sticky;
@@ -18,6 +23,7 @@ body {
   background-size: cover;
   background-attachment: fixed;
   height: 100vh; /* Adjust as needed */
+  width: 100vw;
 }
 
 .navbar {
