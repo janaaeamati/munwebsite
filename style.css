@@ -1,6 +1,7 @@
 body {
   margin: 0;
   padding: 0;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 h2 {
@@ -19,25 +20,49 @@ h2 {
 }
 
 .banner {
-  background-image: url('your-image.jpg');
-  background-size: cover;
-  background-attachment: fixed;
-  height: 100vh; /* Adjust as needed */
-  width: 100vw;
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.banner img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.text-overlay {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #fff; /* Adjust text color to contrast with your image */
+}
+
+.text-overlay h1{
+  font-size: 5rem;
+  letter-spacing: .15rem;
+}
+
+.text-overlay p{
+  font-size: 2.4rem;
 }
 
 .navbar {
-  background-color: black;
-  height: 50px;
+  background-color: #111111;
+  height: 90px;
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 0 20px;
+  font-size: 1.2rem;
 }
 
 .navbar img {
-  width: 92.2px;
-  height: 50px;
+  height: 90px;
 }
 
 .navbar a {
@@ -101,7 +126,7 @@ nav a:hover {
   margin-bottom: 2rem;
 }
 
-#about-line{
+#about-line {
   max-width: 50%;
 }
 
@@ -113,42 +138,46 @@ nav a:hover {
   font-size: 1.25rem;
 }
 
-.contact-body h1{
+.contact-body h1 {
   font-weight: 500;
   font-size: 2.8rem;
 }
 
+.contact-body a {
+  text-align: center;
+}
+
 * {
   box-sizing: border-box;
-  }
-  
-  form.example input[type=text] {
-    padding: 10px;
-    font-size: 17px;
-    border: 1px solid grey;
-    float: left;
-    width: 80%;
-    background: #f1f1f1;
-  }
-  
-  form.example button {
-    float: left;
-    width: 20%;
-    padding: 10px;
-    background: #2196F3;
-    color: white;
-    font-size: 17px;
-    border: 1px solid grey;
-    border-left: none;
-    cursor: pointer;
-  }
-  
-  form.example button:hover {
-    background: #0b7dda;
-  }
-  
-  form.example::after {
-    content: "";
-    clear: both;
-    display: table;
-  }
+}
+
+form.example input[type=text] {
+  padding: 10px;
+  font-size: 17px;
+  border: 1px solid grey;
+  float: left;
+  width: 80%;
+  background: #f1f1f1;
+}
+
+form.example button {
+  float: left;
+  width: 20%;
+  padding: 10px;
+  background: #2196F3;
+  color: white;
+  font-size: 17px;
+  border: 1px solid grey;
+  border-left: none;
+  cursor: pointer;
+}
+
+form.example button:hover {
+  background: #0b7dda;
+}
+
+form.example::after {
+  content: "";
+  clear: both;
+  display: table;
+}
