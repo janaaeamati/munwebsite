@@ -41,13 +41,17 @@ h2 {
   color: #fff; /* Adjust text color to contrast with your image */
 }
 
+
+
 .text-overlay h1{
   font-size: 5rem;
   letter-spacing: .15rem;
+  margin: 0;
 }
 
 .text-overlay p{
   font-size: 2.4rem;
+  margin: 0;
 }
 
 .navbar {
@@ -59,6 +63,10 @@ h2 {
   align-items: center;
   padding: 0 20px;
   font-size: 1.2rem;
+}
+
+.horizontal-logo{
+  display: none;
 }
 
 .navbar img {
@@ -118,6 +126,8 @@ nav a:hover {
   font-size: 2.3rem;
   margin-bottom: 2.5rem;
 }
+
+
 
 #about-title {
   text-align: center;
@@ -180,4 +190,37 @@ form.example::after {
   content: "";
   clear: both;
   display: table;
+}
+
+@media only screen and (max-width: 1150px) {
+  .text-overlay {
+    top: 40%;
+  }
+  
+}
+
+@media only screen and (max-width: 850px) {
+  .text-overlay h1 {
+    font-size: 4rem;
+  }
+
+  .text-overlay p{
+    font-size: 1.4rem;
+  }
+  
+}
+
+@media only screen and (max-width: 590px) {
+  .banner{
+    display: none;
+  }
+  .navbar{
+    flex-direction: column;
+    height: 50%;
+  }
+
+  .navbar a,img{
+    margin-bottom: 1rem;
+  }
+  
 }
