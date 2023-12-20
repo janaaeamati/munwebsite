@@ -95,3 +95,34 @@ nav a {
 nav a:hover {
   opacity: 80%;
 }
+
+br{
+  display: none;
+}
+
+
+@media only screen and (max-width: 583px) {
+  nav{
+    flex-direction: column;
+  }
+
+  nav a{
+    margin-bottom: 63px;
+  }
+
+  h1{
+    font-size: 5.2rem;
+    
+  }
+
+  h2{
+    font-size: 2.4rem;
+    word-wrap: unset;
+  }
+
+  br{
+    display: block;
+  }
+
+
+}
