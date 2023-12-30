@@ -5,8 +5,8 @@ body {
 }
 
 h2 {
-  font-family: "Times New Roman", Times, serif;
   text-align: center;
+  font-weight: 500;
 }
 
 .sticky-picture {
@@ -38,18 +38,19 @@ h2 {
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
-  color: #fff; /* Adjust text color to contrast with your image */
+  color: #fff;
+  /* Adjust text color to contrast with your image */
 }
 
 
 
-.text-overlay h1{
+.text-overlay h1 {
   font-size: 5rem;
   letter-spacing: .15rem;
   margin: 0;
 }
 
-.text-overlay p{
+.text-overlay p {
   font-size: 2.4rem;
   margin: 0;
 }
@@ -65,7 +66,7 @@ h2 {
   font-size: 1.2rem;
 }
 
-.horizontal-logo{
+.horizontal-logo {
   display: none;
 }
 
@@ -140,63 +141,139 @@ nav a:hover {
   max-width: 50%;
 }
 
-.contact-body {
-  width: 30%;
-  margin: 0 auto;
-  margin-top: 3rem;
-  text-align: center;
-  font-size: 1.25rem;
-}
 
-.contact-body h1 {
-  font-weight: 500;
-  font-size: 2.8rem;
-}
-
-.contact-body a {
-  text-align: center;
-}
 
 * {
   box-sizing: border-box;
 }
 
-form.example input[type=text] {
-  padding: 10px;
-  font-size: 17px;
-  border: 1px solid grey;
-  float: left;
-  width: 80%;
-  background: #f1f1f1;
+
+
+.container-container {
+  display: flex;
+  justify-content: center;
 }
 
-form.example button {
-  float: left;
-  width: 20%;
-  padding: 10px;
-  background: #2196F3;
+.contact-container {
+  display: grid;
+  grid-template-columns: auto auto;
+  column-gap: 3rem;
+  margin-top: 5rem;
+}
+
+.labels {
+  text-align: center;
+}
+
+fieldset {
+  border-style: none;
+  display: inline-block;
+}
+
+iframe {
+  margin-right: 20px;
+}
+
+.first-name,
+.last-name {
+  width: 48%;
+}
+
+.not-msg-input,
+.contact-message {
+  width: 100%;
+  background-color: #f0f0f0;
+  border: 1px solid #6d6c6c;
+  font-size: 19px;
+}
+
+.not-msg-input {
+  height: 45px;
+}
+
+.contact-message {
+  height: 100px;
+}
+
+.contact-form {
+  margin-right: 20px;
+  margin-top: 15px;
+  margin-bottom: 30px;
+}
+
+.other-inputs {
+  width: 97.7%;
+}
+
+.submit {
+  width: 150px;
+  background-color: black;
   color: white;
-  font-size: 17px;
-  border: 1px solid grey;
-  border-left: none;
+  margin-left: 14px;
+  height: 45px;
+  border: none;
+  font-size: 19px;
+}
+
+.submit:hover {
+  opacity: 90%;
   cursor: pointer;
 }
 
-form.example button:hover {
-  background: #0b7dda;
+.contact-caption {
+  max-width: 469px;
 }
 
-form.example::after {
-  content: "";
-  clear: both;
-  display: table;
+#map-container {
+  position: relative;
+  width: calc(100% - 20px);
+  /* Subtract 20px for the right margin */
+  margin-right: 20px;
+  /* Set the right margin */
+  padding-bottom: 75%;
 }
+
+#google-map {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border: 0;
+
+}
+
+@media only screen and (max-width: 880px) {
+  .contact-container {
+    grid-template-columns: auto;
+  }
+
+  #map-container {
+    margin-left: 10px;
+  }
+
+  .labels {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+
+  .contact-form {
+    margin-left: 20px;
+  }
+}
+
+@media only screen and (max-width: 382px) {
+
+  .first-name,
+  .last-name {
+    width: 45%;
+  }
+}
+
 
 @media only screen and (max-width: 1150px) {
   .text-overlay {
     top: 40%;
   }
-  
+
 }
 
 @media only screen and (max-width: 850px) {
@@ -204,23 +281,25 @@ form.example::after {
     font-size: 4rem;
   }
 
-  .text-overlay p{
+  .text-overlay p {
     font-size: 1.4rem;
   }
-  
+
 }
 
 @media only screen and (max-width: 590px) {
-  .banner{
+  .banner {
     display: none;
   }
-  .navbar{
+
+  .navbar {
     flex-direction: column;
     height: 50%;
   }
 
-  .navbar a,img{
+  .navbar a,
+  img {
     margin-bottom: 1rem;
   }
-  
+
 }

@@ -8,6 +8,12 @@
   <title>NHHS Model UN</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.form/4.2.2/jquery.form.min.js"
+    integrity="sha256-2Pjr1OlpZMY6qesJM68t2v39t+lMLvxwpa8QlRjJroA=" crossorigin="anonymous"></script>
+  <style>
+    
+  </style>
 </head>
 
 <body>
@@ -27,13 +33,136 @@
     <a href="contact.html">CONTACT</a>
   </nav>
 
-  <main class="contact-body">
-    <h1>Contact Information</h1>
-    <hr>
-    <p>Email: <a href="mailto:northhagerstownhighmun@gmail.com">northhagerstownhighmun@gmail.com</a></p>
-    <p>Instagram: <a href="https://www.instagram.com/nhhs.modelun/">@nhhsmun</a></p>
-    <p>Phone: (Adding it later) </p>
-  </main>
+  <div class="container-container">
+    <div class="contact-container">
+      <div class="labels">
+        <h2>North Hagerstown High School</h2>
+        <p>1200 Pennsylvania Ave, Hagerstown, MD 21742</p>
+      </div>
+      <div id="map-container">
+        <iframe id="google-map"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d52051.7414774858!2d-77.709463722566!3d39.680218573957504!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c992ce9396860d%3A0x936f3b5acc94dd17!2sNorth%20Hagerstown%20High%20School!5e0!3m2!1sen!2sus!4v1703036889653!5m2!1sen!2sus"
+          style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+      <div class="labels">
+        <h2>Contact Form</h2>
+        <p class="contact-caption">Use this form to contact our communications team or send an email at
+          northhagerstownhighmun@gmail.com</p>
+      </div>
+      <div>
+        <form
+          action="https://docs.google.com/forms/d/e/1FAIpQLScNpMBSuoAgd3C-ENSKPvE4KAvqOlzRYjcZsXtbR7dZkfU32w/formResponse"
+          target="_self" id="bootstrapForm" method="POST" class="contact-form">
+
+
+          <!-- Field type: "short" id: "521684297" -->
+          <fieldset class="first-name">
+            <legend for="521684297">First Name</legend>
+            <div class="form-group">
+              <input id="138211032" type="text" name="entry.138211032" class="form-control fn-input not-msg-input" required>
+            </div>
+          </fieldset>
+
+
+          <!-- Field type: "short" id: "863314283" -->
+          <fieldset class="last-name">
+            <legend for="863314283">Last Name</legend>
+            <div class="form-group">
+              <input id="1005225657" type="text" name="entry.1005225657" class="form-control ln-input not-msg-input"" required>
+            </div>
+          </fieldset>
+          <br>
+
+          <!-- Field type: "short" id: "960126706" -->
+          <fieldset class="other-inputs">
+            <legend for="960126706">Email</legend>
+            <div class="form-group">
+              <input id="1488570157" type="text" name="entry.1488570157" class="form-control not-msg-input"" required>
+            </div>
+          </fieldset>
+          <br>
+
+          <!-- Field type: "short" id: "489399671" -->
+          <fieldset class="other-inputs">
+            <legend for="489399671">Subject</legend>
+            <div class="form-group">
+              <input id="1795151318" type="text" name="entry.1795151318" class="form-control not-msg-input"" required>
+            </div>
+          </fieldset>
+          <br>
+
+          <!-- Field type: "paragraph" id: "296365850" -->
+          <fieldset class="other-inputs">
+            <legend for="296365850">Message</legend>
+            <div class="form-group">
+              <textarea id="1816361653" name="entry.1816361653" class="form-control contact-message" required></textarea>
+            </div>
+          </fieldset>
+
+          <input type="hidden" name="fvv" value="1">
+          <input type="hidden" name="fbzx" value="-7664429038525156748">
+          <!--
+          CAVEAT: In multipages (multisection) forms, *pageHistory* field tells to google what sections we've currently completed.
+          This usually starts as "0" for the first page, then "0,1" in the second page... up to "0,1,2..N" in n-th page.
+          Keep this in mind if you plan to change this code to recreate any sort of multipage-feature in your exported form.
+          We're setting this to the total number of pages in this form because we're sending all fields from all the section together.
+      -->
+          <input type="hidden" name="pageHistory" value="0">
+
+          <input class="btn btn-primary submit" type="submit" value="Submit">
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    $('#bootstrapForm').submit(function (event) {
+      event.preventDefault()
+      var extraData = {}
+      $('#bootstrapForm').ajaxSubmit({
+        data: extraData,
+        dataType: 'jsonp',  // This won't really work. It's just to use a GET instead of a POST to allow cookies from different domain.
+        error: function () {
+          // Submit of form should be successful but JSONP callback will fail because Google Forms
+          // does not support it, so this is handled as a failure.
+          $('#bootstrapForm')[0].reset();
+          alert('Form Submitted. Thanks.')
+          // You can also redirect the user to a custom thank-you page:
+          // window.location = 'http://www.mydomain.com/thankyoupage.html'
+
+        }
+      })
+
+    })
+  </script>
+
+  <script>
+    function adjustIframeSize() {
+      var container = document.getElementById('responsive-iframe-container');
+      var iframe = document.getElementById('responsive-iframe');
+
+      var containerWidth = container.offsetWidth;
+      var newHeight = (containerWidth * 0.75);
+
+      var maxWidth = 600;
+
+      if (containerWidth > maxWidth) {
+        var scaleFactor = maxWidth / containerWidth;
+        container.style.width = maxWidth + 'px';
+        iframe.style.width = '100%';
+        iframe.style.height = newHeight * scaleFactor + 'px';
+      } else {
+        container.style.width = 'calc(100% - 20px)'; /* Adjust width with margin */
+        iframe.style.width = '100%';
+        iframe.style.height = newHeight + 'px';
+      }
+    }
+
+    window.addEventListener('resize', adjustIframeSize);
+
+    adjustIframeSize();
+  </script>
+
 
 </body>
 
