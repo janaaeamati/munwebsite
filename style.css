@@ -313,6 +313,7 @@ iframe {
 .column {
   flex: 1; /* Make columns grow equally to take available space */
   padding: 20px;
+  text-align: center;
 }
 
 /* Style for the vertical line */
@@ -324,4 +325,11 @@ iframe {
 .map-container {
   width: 100%; /* Ensure the map takes up the entire width of the column */
   height: 300px; /* Adjust the height as needed */
+}
+
+.link {
+  display: block;
+  width: 100%; /* Ensure the link takes up the entire width of the column */
+  max-width: 300px; /* Set a maximum width for the image */
+  height: auto;
 }
