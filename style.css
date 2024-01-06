@@ -1,8 +1,8 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-}
+  font-family: 'Times New Roman', Times, serif;
+}  
 
 h2 {
   text-align: center;
@@ -302,4 +302,26 @@ iframe {
     margin-bottom: 1rem;
   }
 
+}
+
+.container {
+  display: flex;
+  border: 2px solid #ccc; /* Border for the vertical line */
+}
+
+/* Style for each column */
+.column {
+  flex: 1; /* Make columns grow equally to take available space */
+  padding: 20px;
+}
+
+/* Style for the vertical line */
+.vertical-line {
+  border-left: 2px solid #ccc; /* Color of the vertical line */
+  height: 100%;
+}
+
+.map-container {
+  width: 100%; /* Ensure the map takes up the entire width of the column */
+  height: 300px; /* Adjust the height as needed */
 }
