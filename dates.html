@@ -1,10 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <link rel="stylesheet" type="text/css" href="style.css">
   <title>NHHS Model UN</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.form/4.2.2/jquery.form.min.js"
+    integrity="sha256-2Pjr1OlpZMY6qesJM68t2v39t+lMLvxwpa8QlRjJroA=" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -25,111 +29,96 @@
   <h2>Welcome to TriMUN!!</h2>
   <div class="container">
     <div class="column">
-        <!-- Content for the left column -->
-        <h2>The North Hagerstown High School MUN team is hosting TriMUN, a training MUN for schools in the Tri-State Area with new MUN teams</h2>
-        <p>We are very excited to be offering the 1st Tri-State Area Model United Nations Conference hosted by North High.<br><br>The conference is open to both middle and high school students.<br><br> TriMUN - Saturday, February 4, 2024 - 9:00 am - 4:00 pm</p>
-        <h3>This conference is proudly sponsored by</h3>
-        <p>No one atm, if anybody is interested please contact our advisor, Ms. Akamine at akamiang@wcps.k12.md.us</p>
-        <!--WHhen, where-->
-        <p>This training MUN is going to be at North Hagerstown High School. For parking, park behind the gym.</p>
-        <!--Have to add a map with the address-->
-        <div class="map-container">
-          <iframe src="https://maps.app.goo.gl/X8FfW5fshFhf1PwGA" width="100%" height="100%" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
-        </div>
-        <h3>Links to Letters</h3>
-        <embed class="link" src="Letter from Secretary General.pdf" type="application/pdf" alt="Letter from Secretary General"/>
-        <embed class="link" src="Letter to Advisors.pdf" type="application/pdf" alt="Letter to Advisors"/>
-        <embed class="link" src="Graham's Letter.pdf" type="application/pdf" alt="Graham's Letter"/>
-        <h3>Registration Information</h3>
-        <p>To Register you will need to fill out the form below. You will need to have a permission slip. The form to fill out the permission slip will also be below. If payment has to be done electronically, North Hagerstown High Schools W2 will also be posted below.</p>
-        <h2>LUNCH IS NOT PROVIDED YOU WILL HAVE THE OPTION TO BUY IT INDIVIDUALLY FOR $5, ANY ALLERGIES OR DIETARY RESTRICTIONS WILL BE TAKEN INTO ACCOUNT</h2>
-        <div>
-          <form
-            action="https://docs.google.com/forms/d/e/1FAIpQLScNpMBSuoAgd3C-ENSKPvE4KAvqOlzRYjcZsXtbR7dZkfU32w/formResponse"
-            target="_self" id="bootstrapForm" method="POST" class="contact-form">
-  
-  
-            <!-- Field type: "short" id: "521684297" -->
-            <fieldset class="first-name">
-              <legend for="521684297">First Name</legend>
-              <div class="form-group">
-                <input id="138211032" type="text" name="entry.138211032" class="form-control fn-input not-msg-input" required>
-              </div>
-            </fieldset>
-  
-  
-            <!-- Field type: "short" id: "863314283" -->
-            <fieldset class="last-name">
-              <legend for="863314283">Last Name</legend>
-              <div class="form-group">
-                <input id="1005225657" type="text" name="entry.1005225657" class="form-control ln-input not-msg-input"" required>
-              </div>
-            </fieldset>
-            <br>
-  
-            <!-- Field type: "short" id: "960126706" -->
-            <fieldset class="other-inputs">
-              <legend for="960126706">Email</legend>
-              <div class="form-group">
-                <input id="1488570157" type="text" name="entry.1488570157" class="form-control not-msg-input"" required>
-              </div>
-            </fieldset>
-            <br>
-  
-            <!-- Field type: "short" id: "489399671" -->
-            <fieldset class="other-inputs">
-              <legend for="489399671">Subject</legend>
-              <div class="form-group">
-                <input id="1795151318" type="text" name="entry.1795151318" class="form-control not-msg-input"" required>
-              </div>
-            </fieldset>
-            <br>
-  
-            <!-- Field type: "paragraph" id: "296365850" -->
-            <fieldset class="other-inputs">
-              <legend for="296365850">Message</legend>
-              <div class="form-group">
-                <textarea id="1816361653" name="entry.1816361653" class="form-control contact-message" required></textarea>
-              </div>
-            </fieldset>
-  
-            <input type="hidden" name="fvv" value="1">
-            <input type="hidden" name="fbzx" value="-7664429038525156748">
-            <!--
-            CAVEAT: In multipages (multisection) forms, *pageHistory* field tells to google what sections we've currently completed.
-            This usually starts as "0" for the first page, then "0,1" in the second page... up to "0,1,2..N" in n-th page.
-            Keep this in mind if you plan to change this code to recreate any sort of multipage-feature in your exported form.
-            We're setting this to the total number of pages in this form because we're sending all fields from all the section together.
-        -->
-            <input type="hidden" name="pageHistory" value="0">
-  
-            <input class="btn btn-primary submit" type="submit" value="Submit">
-          </form>
-        </div>
-        <embed class="link" src="NHHS W2.pdf" type="application/pdf" alt="NHHS W2"/>
+      <!-- Content for the left column -->
+      <h2>The North Hagerstown High School MUN team is hosting TriMUN, a training MUN for schools in the Tri-State Area
+        with new MUN teams</h2>
+      <p>We are very excited to be offering the 1st Tri-State Area Model United Nations Conference hosted by North
+        High.<br><br>The conference is open to both middle and high school students.<br><br> TriMUN - Saturday, February
+        4, 2024 - 9:00 am - 4:00 pm</p>
+      <h3>This conference is proudly sponsored by</h3>
+      <p>No one atm, if anybody is interested please contact our advisor, Ms. Akamine at akamiang@wcps.k12.md.us</p>
+      <!--WHhen, where-->
+      <p>This training MUN is going to be at North Hagerstown High School. For parking, park behind the gym.</p>
+      <!--Have to add a map with the address-->
+      <div>
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d52051.7414774858!2d-77.709463722566!3d39.680218573957504!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c992ce9396860d%3A0x936f3b5acc94dd17!2sNorth%20Hagerstown%20High%20School!5e0!3m2!1sen!2sus!4v1703036889653!5m2!1sen!2sus"
+          style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+      <h3>Links to Letters</h3>
+      <embed class="link" src="media/Letter from Secretary General.pdf" type="application/pdf" alt="Letter from Secretary General" width="100%" />
+      <embed class="link" src="media/Letter to Advisors.pdf" type="application/pdf" alt="Letter to Advisors" />
+      <embed class="link" src="media/Graham's Letter.pdf" type="application/pdf" alt="Graham's Letter" />
+      <h3>Registration Information</h3>
+      <p>To Register you will need to fill out the form below. You will need to have a permission slip. The form to fill
+        out the permission slip will also be below. If payment has to be done electronically, North Hagerstown High
+        Schools W2 will also be posted below.</p>
+      <h2>Lunch is not provided. Delegates will have the option to buy it individually for $8. ANY ALLERGIES OR DIETARY
+        RESTRICTIONS WILL BE TAKEN INTO ACCOUNT</h2>
+      <div>
+        <iframe
+          src="https://docs.google.com/forms/d/e/1FAIpQLSc_Z0bGc-O_0fPZ68wV_MwTCGwLNS6tthfXNNqOq6cj9OW2RQ/viewform?embedded=true"
+          width="640" height="2691" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+      </div>
+      <embed class="link" src="NHHS W2.pdf" type="application/pdf" alt="NHHS W2" />
     </div>
 
     <div class="vertical-line"></div>
 
     <div class="column">
-        <!-- Content for the right column -->
-        <!-- registration forms, background guides, shedules, additional info-->
-        <h2>Within this column wou will find all of the information that you need to get involved!!</h2>
-        <h3>What is the topic and what do I have to know?</h3>
-        <p>Every MUN committee has a topic; however, since this will be the first conference for all of you we will have a topic that is widely known, a pretty common topic, but there isn't an easy solution in the grand scheme of politics.<br><br>The topic that we will be debating this year at TriMUN is Drug Trafficking.</p>
-        <p>A number of individuals from each team will be assigned different countries. Normally, for an MUN conference, delegates (the attendees) have to do their own research and write a position paper, since our target audience is beginners we won't require any paper of any sort or any evidence of anyone having reserched. To make this experience as beginner friendly as possible we have built in time so that the groups of delegates can research their countries position and topic on the day of the training MUN. We will provide delegates with a background guide and rough idea of what their position should be.</p>
-        <h3>What is the schedule?</h3>
-        <p>In the morning there will be a short opening ceremony to briefly explain the goal of the UN and how MUN strives to prepare delegates for the adult world and introduce them to skills such as public speaking, research, compromise, and others. After we will have 5 sessions that will rotate in a clockwise fashion. Once all 5 sessions have been concluded we will have delegates research their position on the topic. Once the alotted time has run out we will have lunch and then go to the actual debating part of the MUN Training Conference.<br><br>An timetable of the schedule is posted below.</p>
-        <p>Some school systems have protocols in place that will not allow access to Google Docs from FCPS, even though the links are set to anyone with the link can view.<br><br>​Advisors from these schools can contact Angela Akamine (akamiang@wcps.k12.md.us) for alternative methods of access for your students.</p>
-        <a href="https://docs.google.com/spreadsheets/d/1IFFnu9DvSY5aEA9KKvN3ejaVo1-c3_Dv2FLvWMXJkjw/edit?usp=sharing">
-          <img class="link" src="https://docs.google.com/spreadsheets/d/1IFFnu9DvSY5aEA9KKvN3ejaVo1-c3_Dv2FLvWMXJkjw/edit?usp=sharing" alt="Link to Schedule">
-        </a>
-        <h3>Where is the "background guide" and basic position information mentioned above?</h3>
-        <br>
-        <p>The background guide and basic position information will be right beneath here as soon as it is available to be disseminated.</p>
-        <embed class="link" src="Background Guide.pdf" type="application/pdf" alt="Background Guide and Country Position"/>
-      </div>
-</div>
+      <!-- Content for the right column -->
+      <!-- registration forms, background guides, shedules, additional info-->
+      <h2>Within this column wou will find all of the information that you need to get involved!!</h2>
+      <h3>What is the topic and what do I have to know?</h3>
+      <p>Every MUN committee has a topic; however, since this will be the first conference for all of you we will have a
+        topic that is widely known, a pretty common topic, but there isn't an easy solution in the grand scheme of
+        politics.<br><br>The topic that we will be debating this year at TriMUN is Drug Trafficking.</p>
+      <p>A number of individuals from each team will be assigned different countries. Normally, for an MUN conference,
+        delegates (the attendees) have to do their own research and write a position paper, since our target audience is
+        beginners we won't require any paper of any sort or any evidence of anyone having reserched. To make this
+        experience as beginner friendly as possible we have built in time so that the groups of delegates can research
+        their countries position and topic on the day of the training MUN. We will provide delegates with a background
+        guide and rough idea of what their position should be.</p>
+      <h3>What is the schedule?</h3>
+      <p>In the morning there will be a short opening ceremony to briefly explain the goal of the UN and how MUN strives
+        to prepare delegates for the adult world and introduce them to skills such as public speaking, research,
+        compromise, and others. After we will have 5 sessions that will rotate in a clockwise fashion. Once all 5
+        sessions have been concluded we will have delegates research their position on the topic. Once the alotted time
+        has run out we will have lunch and then go to the actual debating part of the MUN Training Conference.<br><br>An
+        timetable of the schedule is posted below.</p>
+      <p>Some school systems have protocols in place that will not allow access to Google Docs from FCPS, even though
+        the links are set to anyone with the link can view.<br><br>​Advisors from these schools can contact Angela
+        Akamine (akamiang@wcps.k12.md.us) for alternative methods of access for your students.</p>
+      <a href="https://docs.google.com/spreadsheets/d/1IFFnu9DvSY5aEA9KKvN3ejaVo1-c3_Dv2FLvWMXJkjw/edit?usp=sharing">
+        <img class="link"
+          src="https://docs.google.com/spreadsheets/d/1IFFnu9DvSY5aEA9KKvN3ejaVo1-c3_Dv2FLvWMXJkjw/edit?usp=sharing"
+          alt="Link to Schedule">
+      </a>
+      <h3>Where is the "background guide" and basic position information mentioned above?</h3>
+      <br>
+      <p>The background guide and basic position information will be right beneath here as soon as it is available to be
+        disseminated.</p>
+      <embed class="link" src="Background Guide.pdf" type="application/pdf"
+        alt="Background Guide and Country Position" />
+    </div>
+  </div>
+  <script>
+    $('#bootstrapForm').submit(function (event) {
+      event.preventDefault()
+      var extraData = {}
+      $('#bootstrapForm').ajaxSubmit({
+        data: extraData,
+        dataType: 'jsonp',  // This won't really work. It's just to use a GET instead of a POST to allow cookies from different domain.
+        error: function () {
+          // Submit of form should be successful but JSONP callback will fail because Google Forms
+          // does not support it, so this is handled as a failure.
+          alert('Form Submitted. Thanks.')
+          // You can also redirect the user to a custom thank-you page:
+          // window.location = 'http://www.mydomain.com/thankyoupage.html'
+        }
+      })
+    })
+  </script>
 </body>
 
 </html>
