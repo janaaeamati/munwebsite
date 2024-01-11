@@ -126,3 +126,9 @@ br{
 
 
 }
+
+@media only screen and (max-height:579px){
+  .content{
+    top: 45%;
+  }
+}
