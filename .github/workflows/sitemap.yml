@@ -1,2 +1,15 @@
-- name: generate-sitemap
-uses: cicirello/generate-sitemap@v1.10.0
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  generate-sitemap:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Generate Sitemap
+      uses: cicirello/generate-sitemap@v1.10.0
