@@ -19,10 +19,13 @@ jobs:
       with:
         base-url-path: https://nhhsmun.org
       
-    - name: Commit and Push Changes
+    - name: Commit and push
       run: |
-        git add ${{ steps.sitemap.outputs.sitemap-path }}
-        git config --local user.email "${GITHUB_ACTOR}@users.noreply.github.com"
-        git config --local user.name "${GITHUB_ACTOR}"
-        git commit -m "Automated sitemap update."
-        git push origin HEAD
+        if [[ `git status --porcelain sitemap.xml` ]]; then
+          git config --global user.name 'github-actions'
+          git config --global user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add sitemap.xml
+          git commit -m "Automated sitemap update" sitemap.xml
+          git push
+        
+      
