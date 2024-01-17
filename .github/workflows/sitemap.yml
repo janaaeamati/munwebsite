@@ -2,6 +2,7 @@ on:
   push:
     branches:
       - main
+    paths: [ '**.html', '**.pdf','**.css' ]  
 
 jobs:
   generate-sitemap:
@@ -9,7 +10,7 @@ jobs:
 
     steps:
     - name: Checkout repository
-      uses: actions/checkout@v3
+      uses: actions/checkout@v4
       with:
         fetch-depth: 0
 
@@ -19,3 +20,8 @@ jobs:
       with:
         base-url-path: https://nhhsmun.org
       
+    - name: Commit and Push Changes
+      run: |
+        git add ${{ steps.sitemap.outputs.sitemap-path }}
+        git commit -m "Automated sitemap update."
+        git push origin HEAD
