@@ -18,6 +18,7 @@ jobs:
       uses: cicirello/generate-sitemap@v1.10.0
       with:
         base-url-path: https://nhhsmun.org
+        drop-html-extension: true
       
     - name: Commit and push
       run: |
