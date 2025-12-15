@@ -10,7 +10,7 @@ body {
 
 .myUL {
     display: inline-block;
-    text-align: center;
+    text-align: left;
     padding-left: 0;
 }
 
